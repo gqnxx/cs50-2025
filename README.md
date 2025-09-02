@@ -28,3 +28,11 @@ If you have CS50 Library available (cs50.h), you can compile with `make`. Otherw
 
 ## Submitting
 We’ll commit each pset in its folder and push here. If you submit to CS50’s grader, you can copy files from the corresponding folder or push from CS50 IDE as required by the course.
+
+## Sync to me50 (submit50-style)
+On Windows PowerShell, you can mirror pset1 files into your me50 repo branches with:
+
+- cd cs50-2025/tools
+- powershell -ExecutionPolicy Bypass -File .\sync-me50.ps1
+
+Adjust -YearSlug if needed (e.g., 2024).
