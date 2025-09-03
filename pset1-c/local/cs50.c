@@ -1,6 +1,7 @@
 #include "cs50.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 static void promptf(const char *prompt)
 {
@@ -78,4 +79,27 @@ bool get_bool(const char *prompt)
         int ch; while ((ch = getchar()) != '\n' && ch != EOF) {}
         fputs("Retry: ", stdout);
     }
+}
+
+string get_string(const char *prompt)
+{
+    promptf(prompt);
+    size_t cap = 64;
+    char *buf = (char*)malloc(cap);
+    if (!buf) exit(1);
+    size_t len = 0;
+    int ch;
+    while ((ch = getchar()) != '\n' && ch != EOF)
+    {
+        if (len + 1 >= cap)
+        {
+            cap *= 2;
+            char *tmp = (char*)realloc(buf, cap);
+            if (!tmp) { free(buf); exit(1); }
+            buf = tmp;
+        }
+        buf[len++] = (char)ch;
+    }
+    buf[len] = '\0';
+    return buf;
 }
