@@ -1,19 +1,17 @@
 #include <cs50.h>
 #include <stdio.h>
-#include <math.h>
 
 int main(void)
 {
-    float dollars;
+    // Read non-negative number of cents
+    int cents;
     do
     {
-        dollars = get_float("Change owed: ");
+        cents = get_int("Change owed: ");
     }
-    while (dollars < 0);
+    while (cents < 0);
 
-    int cents = (int) roundf(dollars * 100.0f);
     int coins = 0;
-
     int denoms[] = {25, 10, 5, 1};
     for (int i = 0; i < 4; i++)
     {
