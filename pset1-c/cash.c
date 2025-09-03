@@ -3,7 +3,6 @@
 
 int main(void)
 {
-    // Read non-negative number of cents
     int cents;
     do
     {
