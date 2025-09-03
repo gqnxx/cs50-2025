@@ -15,6 +15,18 @@ case "$problem" in
     dir="pset1-c/hello"
     slugs=("cs50/problems/2025/x/hello" "cs50/problems/2024/x/hello")
     ;;
+  scrabble)
+    dir="pset2-c/scrabble"
+    slugs=("cs50/problems/2025/x/scrabble")
+    ;;
+  readability)
+    dir="pset2-c/readability"
+    slugs=("cs50/problems/2025/x/readability")
+    ;;
+  caesar)
+    dir="pset2-c/caesar"
+    slugs=("cs50/problems/2025/x/caesar")
+    ;;
   mario/less)
     dir="pset1-c/mario-less"
     slugs=("cs50/problems/2025/x/mario/less")

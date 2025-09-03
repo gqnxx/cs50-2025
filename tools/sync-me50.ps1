@@ -80,6 +80,11 @@ $problems = @(
   @{ branch = "cs50/problems/$YearSlug/x/credit";     src = (Join-Path $Pset1Path "credit\credit.c");      root = "credit.c"; main = "pset1/credit/credit.c" },
   # Mirror hello onto the scratch default branch for quick viewing
   @{ branch = "cs50/problems/$YearSlug/x/scratch";    src = (Join-Path $Pset1Path "hello\hello.c");       root = "hello.c" }
+  
+  # Week 2
+  @{ branch = "cs50/problems/$YearSlug/x/scrabble";   src = (Join-Path $PSScriptRoot "..\pset2-c\scrabble\scrabble.c");       root = "scrabble.c";   main = "pset2/scrabble/scrabble.c" },
+  @{ branch = "cs50/problems/$YearSlug/x/readability";src = (Join-Path $PSScriptRoot "..\pset2-c\readability\readability.c"); root = "readability.c"; main = "pset2/readability/readability.c" },
+  @{ branch = "cs50/problems/$YearSlug/x/caesar";     src = (Join-Path $PSScriptRoot "..\pset2-c\caesar\caesar.c");         root = "caesar.c";     main = "pset2/caesar/caesar.c" }
 )
 
 foreach ($p in $problems) {
