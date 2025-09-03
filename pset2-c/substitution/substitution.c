@@ -1,0 +1,9 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(int argc, string argv[])
+{
+    // TODO: implement Substitution cipher
+    printf("Substitution placeholder. argc=%d\n", argc);
+    return 0;
+}
