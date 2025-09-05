@@ -84,7 +84,13 @@ $problems = @(
   # Week 2
   @{ branch = "cs50/problems/$YearSlug/x/scrabble";   src = (Join-Path $PSScriptRoot "..\pset2-c\scrabble\scrabble.c");       root = "scrabble.c";   main = "pset2/scrabble/scrabble.c" },
   @{ branch = "cs50/problems/$YearSlug/x/readability";src = (Join-Path $PSScriptRoot "..\pset2-c\readability\readability.c"); root = "readability.c"; main = "pset2/readability/readability.c" },
-  @{ branch = "cs50/problems/$YearSlug/x/caesar";     src = (Join-Path $PSScriptRoot "..\pset2-c\caesar\caesar.c");         root = "caesar.c";     main = "pset2/caesar/caesar.c" }
+  @{ branch = "cs50/problems/$YearSlug/x/caesar";     src = (Join-Path $PSScriptRoot "..\pset2-c\caesar\caesar.c");         root = "caesar.c";     main = "pset2/caesar/caesar.c" },
+  
+  # Week 3
+  @{ branch = "cs50/problems/$YearSlug/x/sort";       src = (Join-Path $PSScriptRoot "..\pset3-c\sort\sort.c");           root = "sort.c";       main = "pset3/sort/sort.c" },
+  @{ branch = "cs50/problems/$YearSlug/x/plurality";  src = (Join-Path $PSScriptRoot "..\pset3-c\plurality\plurality.c"); root = "plurality.c";  main = "pset3/plurality/plurality.c" },
+  @{ branch = "cs50/problems/$YearSlug/x/runoff";     src = (Join-Path $PSScriptRoot "..\pset3-c\runoff\runoff.c");       root = "runoff.c";     main = "pset3/runoff/runoff.c" },
+  @{ branch = "cs50/problems/$YearSlug/x/tideman";    src = (Join-Path $PSScriptRoot "..\pset3-c\tideman\tideman.c");     root = "tideman.c";    main = "pset3/tideman/tideman.c" }
 )
 
 foreach ($p in $problems) {
