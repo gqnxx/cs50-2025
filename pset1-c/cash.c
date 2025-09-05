@@ -1,14 +1,18 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <math.h>
 
 int main(void)
 {
-    int cents;
+    float dollars;
     do
     {
-        cents = get_int("Change owed: ");
+        dollars = get_float("Change owed: ");
     }
-    while (cents < 0);
+    while (dollars < 0);
+
+    // Convert to cents and round to avoid floating point errors
+    int cents = round(dollars * 100);
 
     int coins = 0;
     int denoms[] = {25, 10, 5, 1};

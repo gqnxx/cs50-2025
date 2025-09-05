@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title>Birthdays</title>
+        <style>
+            body {
+                background-color: #fff;
+                color: #212529;
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.5;
+                margin: 0;
+                text-align: left;
+                font-family: 'Montserrat', sans-serif;
+            }
+            .container {
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 15px;
+                padding-right: 15px;
+                text-align: center;
+                width: 90%;
+            }
+            .jumbotron {
+                background-color: #477bff;
+                color: #fff;
+                margin-bottom: 2rem;
+                padding: 2rem 1rem;
+                text-align: center;
+            }
+            .section {
+                padding: 0.5rem 2rem 1rem 2rem;
+            }
+            .section:nth-child(odd) {
+                background-color: #ddd;
+            }
+            table {
+                background-color: transparent;
+                margin-bottom: 1rem;
+                width: 100%;
+            }
+            table th,
+            table td {
+                padding: 0.75rem;
+                vertical-align: middle;
+            }
+            tbody tr:nth-child(odd) {
+                background-color: rgb(179, 208, 255, 0.3)
+            }
+            .form-control {
+                background-color: #fff;
+                border: 1px solid #ced4da;
+                border-radius: 0.25rem;
+                color: #495057;
+                font-size: 1rem;
+                line-height: 1.5;
+                margin-bottom: 1rem;
+                padding: 0.375rem 0.75rem;
+                width: 90%;
+            }
+            .btn {
+                color: #fff;
+                background-color: #007bff;
+                border-color: #007bff;
+                border: 1px solid transparent;
+                border-radius: 0.25rem;
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.5;
+                padding: 0.375rem 0.75rem;
+                text-align: center;
+                text-decoration: none;
+                vertical-align: middle;
+                cursor: pointer;
+            }
+            .btn:hover {
+                color: #fff;
+                background-color: #0069d9;
+                border-color: #0062cc;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h1>Birthdays</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+
+                <h2>Add a Birthday</h2>
+                <form action="/" method="post">
+                    <input autocomplete="off" autofocus class="form-control" name="name" placeholder="Name" type="text">
+                    <input class="form-control" name="month" placeholder="Month" type="number" min="1" max="12">
+                    <input class="form-control" name="day" placeholder="Day" type="number" min="1" max="31">
+                    <input class="btn" type="submit" value="Add Birthday">
+                </form>
+            </div>
+
+            <div class="section">
+
+                <h2>All Birthdays</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Birthday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for birthday in birthdays %}
+                            <tr>
+                                <td>{{ birthday.name }}</td>
+                                <td>{{ birthday.month }}/{{ birthday.day }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
