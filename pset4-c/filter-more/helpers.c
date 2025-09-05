@@ -50,10 +50,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            int red_total = 0, green_total = 0, blue_total = 0;
-            int counter = 0;
+            float red_sum = 0, green_sum = 0, blue_sum = 0;
+            int count = 0;
             
-            // Check 3x3 grid around pixel
+            // Check surrounding pixels (3x3 grid)
             for (int di = -1; di <= 1; di++)
             {
                 for (int dj = -1; dj <= 1; dj++)
@@ -61,29 +61,29 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     int ni = i + di;
                     int nj = j + dj;
                     
-                    // Check if within bounds
+                    // Check if pixel is within bounds
                     if (ni >= 0 && ni < height && nj >= 0 && nj < width)
                     {
-                        red_total += copy[ni][nj].rgbtRed;
-                        green_total += copy[ni][nj].rgbtGreen;
-                        blue_total += copy[ni][nj].rgbtBlue;
-                        counter++;
+                        red_sum += copy[ni][nj].rgbtRed;
+                        green_sum += copy[ni][nj].rgbtGreen;
+                        blue_sum += copy[ni][nj].rgbtBlue;
+                        count++;
                     }
                 }
             }
             
-            // Set blurred values
-            image[i][j].rgbtRed = (uint8_t)round((float)red_total / counter);
-            image[i][j].rgbtGreen = (uint8_t)round((float)green_total / counter);
-            image[i][j].rgbtBlue = (uint8_t)round((float)blue_total / counter);
+            // Calculate average and assign
+            image[i][j].rgbtRed = (uint8_t)round(red_sum / count);
+            image[i][j].rgbtGreen = (uint8_t)round(green_sum / count);
+            image[i][j].rgbtBlue = (uint8_t)round(blue_sum / count);
         }
     }
 }
 
-// Detect edges using Sobel operator
+// Detect edges
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
-    // Create copy of image
+    // Create copy of original image
     RGBTRIPLE copy[height][width];
     for (int i = 0; i < height; i++)
     {
