@@ -108,7 +108,17 @@ $problems = @(
   @{ branch = "cs50/problems/$YearSlug/x/sentimental-cash";       src = (Join-Path $PSScriptRoot "..\pset6-py\cash\cash.py");           root = "cash.py";          main = "pset6/cash/cash.py" },
   @{ branch = "cs50/problems/$YearSlug/x/sentimental-credit";     src = (Join-Path $PSScriptRoot "..\pset6-py\credit\credit.py");       root = "credit.py";        main = "pset6/credit/credit.py" },
   @{ branch = "cs50/problems/$YearSlug/x/sentimental-readability"; src = (Join-Path $PSScriptRoot "..\pset6-py\readability\readability.py"); root = "readability.py"; main = "pset6/readability/readability.py" },
-  @{ branch = "cs50/problems/$YearSlug/x/dna";                    src = (Join-Path $PSScriptRoot "..\pset6-py\dna\dna.py");             root = "dna.py";           main = "pset6/dna/dna.py" }
+  @{ branch = "cs50/problems/$YearSlug/x/dna";                    src = (Join-Path $PSScriptRoot "..\pset6-py\dna\dna.py");             root = "dna.py";           main = "pset6/dna/dna.py" },
+  
+  # Week 7 (SQL)
+  @{ branch = "cs50/problems/$YearSlug/x/movies";     src = (Join-Path $PSScriptRoot "..\pset7-sql\movies");              root = ".";           main = "pset7/movies" },
+  @{ branch = "cs50/problems/$YearSlug/x/fiftyville"; src = (Join-Path $PSScriptRoot "..\pset7-sql\fiftyville\log.sql"); root = "log.sql";     main = "pset7/fiftyville/log.sql" },
+  
+  # Week 8 (Web)
+  @{ branch = "cs50/problems/$YearSlug/x/homepage";   src = (Join-Path $PSScriptRoot "..\pset8-web\homepage");            root = ".";           main = "pset8/homepage" },
+  
+  # Week 9 (Flask)
+  @{ branch = "cs50/problems/$YearSlug/x/finance";    src = (Join-Path $PSScriptRoot "..\pset9-flask\finance");           root = ".";           main = "pset9/finance" }
 )
 
 foreach ($p in $problems) {

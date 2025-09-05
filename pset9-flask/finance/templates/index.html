@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <h2>Portfolio</h2>
+            
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Name</th>
+                        <th>Shares</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for stock in stocks %}
+                        <tr>
+                            <td>{{ stock.symbol }}</td>
+                            <td>{{ stock.name }}</td>
+                            <td>{{ stock.total_shares }}</td>
+                            <td>{{ stock.price | usd }}</td>
+                            <td>{{ stock.value | usd }}</td>
+                        </tr>
+                    {% endfor %}
+                    <tr>
+                        <td colspan="4"><strong>Cash</strong></td>
+                        <td><strong>{{ cash | usd }}</strong></td>
+                    </tr>
+                    <tr class="table-dark">
+                        <td colspan="4"><strong>TOTAL</strong></td>
+                        <td><strong>{{ total | usd }}</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="mt-4">
+                <a href="/buy" class="btn btn-primary">Buy Stocks</a>
+                <a href="/sell" class="btn btn-warning">Sell Stocks</a>
+                <a href="/add_cash" class="btn btn-success">Add Cash</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
