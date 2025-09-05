@@ -95,7 +95,20 @@ $problems = @(
   # Week 4
   @{ branch = "cs50/problems/$YearSlug/x/volume";     src = (Join-Path $PSScriptRoot "..\pset4-c\volume\volume.c");       root = "volume.c";     main = "pset4/volume/volume.c" },
   @{ branch = "cs50/problems/$YearSlug/x/filter";     src = (Join-Path $PSScriptRoot "..\pset4-c\filter\filter.c");       root = "filter.c";     main = "pset4/filter/filter.c" },
-  @{ branch = "cs50/problems/$YearSlug/x/recover";    src = (Join-Path $PSScriptRoot "..\pset4-c\recover\recover.c");     root = "recover.c";    main = "pset4/recover/recover.c" }
+  @{ branch = "cs50/problems/$YearSlug/x/recover";    src = (Join-Path $PSScriptRoot "..\pset4-c\recover\recover.c");     root = "recover.c";    main = "pset4/recover/recover.c" },
+  
+  # Week 5
+  @{ branch = "cs50/problems/$YearSlug/x/inheritance"; src = (Join-Path $PSScriptRoot "..\pset5-c\inheritance\inheritance.c"); root = "inheritance.c"; main = "pset5/inheritance/inheritance.c" },
+  @{ branch = "cs50/problems/$YearSlug/x/speller";     src = (Join-Path $PSScriptRoot "..\pset5-c\speller\dictionary.c");      root = "dictionary.c";  main = "pset5/speller/dictionary.c" },
+  
+  # Week 6 (Python)
+  @{ branch = "cs50/problems/$YearSlug/x/sentimental-hello";      src = (Join-Path $PSScriptRoot "..\pset6-py\hello\hello.py");         root = "hello.py";         main = "pset6/hello/hello.py" },
+  @{ branch = "cs50/problems/$YearSlug/x/sentimental-mario-less"; src = (Join-Path $PSScriptRoot "..\pset6-py\mario-less\mario.py");    root = "mario.py";         main = "pset6/mario-less/mario.py" },
+  @{ branch = "cs50/problems/$YearSlug/x/sentimental-mario-more"; src = (Join-Path $PSScriptRoot "..\pset6-py\mario-more\mario.py");    root = "mario.py";         main = "pset6/mario-more/mario.py" },
+  @{ branch = "cs50/problems/$YearSlug/x/sentimental-cash";       src = (Join-Path $PSScriptRoot "..\pset6-py\cash\cash.py");           root = "cash.py";          main = "pset6/cash/cash.py" },
+  @{ branch = "cs50/problems/$YearSlug/x/sentimental-credit";     src = (Join-Path $PSScriptRoot "..\pset6-py\credit\credit.py");       root = "credit.py";        main = "pset6/credit/credit.py" },
+  @{ branch = "cs50/problems/$YearSlug/x/sentimental-readability"; src = (Join-Path $PSScriptRoot "..\pset6-py\readability\readability.py"); root = "readability.py"; main = "pset6/readability/readability.py" },
+  @{ branch = "cs50/problems/$YearSlug/x/dna";                    src = (Join-Path $PSScriptRoot "..\pset6-py\dna\dna.py");             root = "dna.py";           main = "pset6/dna/dna.py" }
 )
 
 foreach ($p in $problems) {
