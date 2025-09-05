@@ -1,0 +1,25 @@
+/* Finance App Custom Styles */
+.navbar-brand {
+    font-weight: bold;
+}
+
+.table th {
+    border-top: 0;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.text-success {
+    color: #28a745 !important;
+}
+
+.text-danger {
+    color: #dc3545 !important;
+}
+
+main {
+    margin-top: 2rem;
+}
