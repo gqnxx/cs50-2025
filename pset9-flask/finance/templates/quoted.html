@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <div class="card mx-auto" style="max-width: 400px;">
+        <div class="card-body text-center">
+            <h5 class="card-title">{{ stock.name }} ({{ stock.symbol }})</h5>
+            <p class="card-text display-6">${{ stock.price }}</p>
+            <a href="/quote" class="btn btn-primary">Quote Another</a>
+        </div>
+    </div>
+{% endblock %}

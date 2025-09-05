@@ -2,6 +2,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <stdint.h>
+#include <stdlib.h>
 
 const int HEADER_SIZE = 44;
 
