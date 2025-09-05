@@ -1,8 +1,16 @@
 def main():
-    # TODO: implement Mario less in Python
-    h = int(input("Height: "))
-    for i in range(1, h+1):
-        print(" " * (h-i) + "#" * i)
+    while True:
+        try:
+            height = int(input("Height: "))
+            if 1 <= height <= 8:
+                break
+        except ValueError:
+            pass
+    
+    for i in range(height):
+        spaces = " " * (height - i - 1)
+        hashes = "#" * (i + 1)
+        print(spaces + hashes)
 
 if __name__ == "__main__":
     main()
